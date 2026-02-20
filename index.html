@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Player</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header><h1 id="site-title">Loading...</h1></header>
+
+    <div class="container">
+        <div class="main-player">
+            <video id="video-player" controls autoplay>
+                Your browser does not support the video tag.
+            </video>
+            <h2 id="now-playing">Select a video</h2>
+        </div>
+
+        <div class="playlist" id="playlist">
+            </div>
+    </div>
+
+    <script src="config.js"></script>
+    <script>
+        // Load settings from config.js
+        document.getElementById('site-title').innerText = CONFIG.siteTitle;
+        const player = document.getElementById('video-player');
+        const titleDisplay = document.getElementById('now-playing');
+        const playlistEl = document.getElementById('playlist');
+
+        function loadVideo(index) {
+            const video = CONFIG.videos[index];
+            player.src = video.url;
+            titleDisplay.innerText = video.title;
+            player.play();
+        }
+
+        // Generate Playlist
+        CONFIG.videos.forEach((video, index) => {
+            const item = document.createElement('div');
+            item.className = 'playlist-item';
+            item.innerHTML = `
+                <img src="${video.thumbnail}" alt="${video.title}">
+                <p>${video.title}</p>
+            `;
+            item.onclick = () => loadVideo(index);
+            playlistEl.appendChild(item);
+        });
+
+        // Load first video by default
+        if (CONFIG.videos.length > 0) loadVideo(0);
+    </script>
+</body>
+</html>
