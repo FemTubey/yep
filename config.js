@@ -1,11 +1,11 @@
 // config.js
 const CONFIG = {
-    siteTitle: "My GitHub Cinema",
+    siteTitle: "Porn for life",
     // Add your raw GitHub video links here
     videos: [
         {
-            title: "Sample Video 1",
-            url: "https://raw.githubusercontent.com/user/repo/main/video1.mp4",
+            title: "bouncing on dick. [made by unknown][Porn for life]",
+            url: "https://raw.githubusercontent.com/FemTubey/yep/main/1.mp4",
             thumbnail: "https://via.placeholder.com/300x160"
         },
         {
