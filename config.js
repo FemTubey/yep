@@ -1,7 +1,7 @@
 const CONFIG = {
     siteTitle: "FemTubey Video Vault",
     discordClientId: "1397766534876762143",
-    redirectUri: "https://femtubey.github.io/yep/",
+    redirectUri: "https://discord.com/oauth2/authorize?client_id=1397766534876762143&response_type=code&redirect_uri=https%3A%2F%2Ffemtubey.github.io%2Fyep%2F&scope=identify+guilds",
     videos: [
         {
             title: "First Video",
