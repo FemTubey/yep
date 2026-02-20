@@ -1,18 +1,12 @@
 const CONFIG = {
-    siteTitle: "FemTubey Player",
-    // --- Discord Settings ---
-    // Get your Client ID from the Discord Developer Portal
-    discordClientId: "1397766534876762143", 
-    // This MUST match the Redirect URI you set in the Discord Portal
-    redirectUri: "https://femtubey.github.io/yep/", 
-    
-    // --- Video List ---
+    siteTitle: "FemTubey Video Vault",
+    discordClientId: "1397766534876762143",
+    redirectUri: "https://femtubey.github.io/yep/",
     videos: [
         {
-            title: "PLACEHOLDER",
+            title: "First Video",
             url: "https://raw.githubusercontent.com/FemTubey/yep/main/1.mp4",
-            thumbnail: "https://via.placeholder.com/300x160"
+            thumbnail: "https://via.placeholder.com/160x90"
         }
-        // Add more videos here...
     ]
 };
